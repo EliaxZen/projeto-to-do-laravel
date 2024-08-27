@@ -2,8 +2,13 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
+use App\Models\Task;
 use Illuminate\Database\Seeder;
+use Database\Seeders\TaskSeeder;
+use Database\Seeders\UserSeeder;
+use Database\Seeders\CategorySeeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +19,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call([
+            UserSeeder::class,
+
+        ]);
+
+        Category::factory(5)->create();
+        Task::factory(50)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

@@ -24,8 +24,8 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
-        Category::factory(5)->create();
-        Task::factory(50)->create();
+        Category::factory(50)->create();
+        Task::factory(30)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

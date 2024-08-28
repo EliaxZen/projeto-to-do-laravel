@@ -26,7 +26,12 @@
             </nav>
             <main>
                 <section class="graph">
-                    Gráfico
+                    <div class="graph_header">
+                        <h2>Progresso do Dia</h2>
+                        <hr class="linha_header" />
+                        Data
+                    </div>
+                    <div class="graph_header_subtitle">Tarefas: <b>3/6</b></div>
                 </section>
                 <section class="list">
                     Lista

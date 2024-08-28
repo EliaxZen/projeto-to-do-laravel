@@ -60,9 +60,23 @@ main {
 }
 
 section.graph {
-    background-color: teal;
     width: 33%;
     height: 100%;
 }
 
+.graph_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.linha_header {
+    width: 50%;
+    height: 0.5px;
+    border-radius: 2px;
+    background-color: black;
+}
+
+.graph_header_subtitle {
+    margin-top: 10px;
+}

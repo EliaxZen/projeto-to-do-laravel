@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Task;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Database\Seeders\TaskSeeder;
 use Database\Seeders\UserSeeder;
@@ -20,17 +21,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            UserSeeder::class,
+            //UserSeeder::class,
 
         ]);
 
-        Category::factory(50)->create();
+        User::factory(20)->create();
+        Category::factory(10)->create();
         Task::factory(30)->create();
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }

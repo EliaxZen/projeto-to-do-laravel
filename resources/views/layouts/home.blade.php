@@ -13,7 +13,16 @@
 </head>
 
 <body>
-    a
+    <div class="container">
+        <div class="sidebar">
+            Logo
+        </div>
+        <div class="content">
+            <nav href="#" class="btn btn-primary">
+                Criar Tarefa
+            </nav>
+        </div>
+    </div>
 </body>
 
 </html>

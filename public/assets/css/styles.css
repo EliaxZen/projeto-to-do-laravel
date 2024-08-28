@@ -1,0 +1,20 @@
+:root {
+    --background-light: #F9FAFB;
+    --background-white: #FFFFFF;
+    --text-dark: #1F2937;
+    --color-primary: #EF3B2D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: Rubik, sans-serif;
+    color: var(--text-dark);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-light);
+}

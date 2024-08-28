@@ -8,7 +8,8 @@
     <title>TodoApp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900 display=swap"rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900 display=swap"rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 
@@ -18,9 +19,19 @@
             Logo
         </div>
         <div class="content">
-            <nav href="#" class="btn btn-primary">
-                Criar Tarefa
+            <nav>
+                <a href="#" class="btn btn-primary">
+                    Criar Tarefa
+                </a>
             </nav>
+            <main>
+                <section class="graph">
+                    Gráfico
+                </section>
+                <section class="list">
+                    Lista
+                </section>
+            </main>
         </div>
     </div>
 </body>

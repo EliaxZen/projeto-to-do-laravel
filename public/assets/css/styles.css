@@ -1,5 +1,5 @@
 :root {
-    --background-light: #F9FAFB;
+    --background-light: #ef3a2d6b;
     --background-white: #FFFFFF;
     --text-dark: #1F2937;
     --color-primary: #EF3B2D;
@@ -32,10 +32,37 @@ body {
 
 nav {
     height: 100px;
-    background-color: teal;
+    background-color: var(--background-light);
     width: calc(100vw - 100px);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 20px;
 }
+
+.btn {
+    padding: 20px 30px;
+    border-radius: 15px;
+}
+
+a.btn {
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+section.graph {
+    background-color: teal;
+    width: 33%;
+    height: 100%;
+}
+
+

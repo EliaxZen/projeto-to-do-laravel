@@ -1,8 +1,8 @@
 :root {
-    --background-light: #ef6a2d5d;
+    --background-light: #FAD4D4;
     --background-white: #FFFFFF;
     --text-dark: #1F2937;
-    --color-primary: #ef6a2de3;
+    --color-primary: #EF3B2D;
 }
 
 * {
@@ -28,6 +28,20 @@ body {
 .sidebar {
     width: 150px;
     background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.594);
+    /* Fundo semitransparente para contraste */
+    border-radius: 10px;
+    /* Bordas arredondadas para destaque */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar */
 }
 
 nav {
@@ -90,10 +104,13 @@ section.graph {
 }
 
 .graph_placeholder {
-    background-color: #ccc;
     width: 400px;
     height: 400px;
     margin-top: 20px;
+    background-image: url('/assets/images/graph.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .graph_header_tasks_left {
@@ -135,7 +152,9 @@ section.graph {
 
 }
 
-.title, .priority, .actions {
+.title,
+.priority,
+.actions {
     display: flex;
     align-items: center;
     flex: 1;
@@ -143,6 +162,10 @@ section.graph {
 
 .actions {
     justify-content: flex-end;
+}
+
+.actions a {
+    margin: 0 20px;
 }
 
 .sphere {

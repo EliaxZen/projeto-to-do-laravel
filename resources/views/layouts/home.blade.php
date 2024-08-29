@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            Logo
+            <img class="logo" src="/assets/images/logo.png" alt="">
         </div>
         <div class="content">
             <nav>
@@ -56,20 +56,12 @@
                                 <div>prioridade</div>
                             </div>
                             <div class="actions">
-                                Editar - Excluir
-                            </div>
-                        </div>
-                        <div class="task">
-                            <div class="title">
-                                <input type="checkbox">
-                                <div class="task_title">Titulo da Tarefa</div>
-                            </div>
-                            <div class="priority">
-                                <div class="sphere"></div>
-                                <div>prioridade</div>
-                            </div>
-                            <div class="actions">
-                                Editar - Excluir
+                                <a href="#">
+                                    <img src="/assets/images/icon-edit.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="/assets/images/icon-delete.png" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>

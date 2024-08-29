@@ -48,7 +48,7 @@
                     <div class="task_list">
                         <div class="task">
                             <div class="title">
-                                <input type="checkbox">
+                                <input class="title_checkbox" type="checkbox">
                                 <div class="task_title">Titulo da Tarefa</div>
                             </div>
                             <div class="priority">

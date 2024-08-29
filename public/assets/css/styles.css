@@ -8,7 +8,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-shadow: border-box;
+    box-sizing: border-box;
     font-family: Rubik, sans-serif;
     color: var(--text-dark);
 }
@@ -60,8 +60,9 @@ main {
 }
 
 section.graph {
-    width: 33%;
+    width: 35%;
     height: 100%;
+    margin-right: 10px;
 }
 
 .graph_header {
@@ -80,3 +81,28 @@ section.graph {
 .graph_header_subtitle {
     margin-top: 10px;
 }
+
+.graph_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph_placeholder {
+    background-color: #ccc;
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.graph_header_tasks_left {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.list_header {
+    display: flex;
+}
+
+.list_header_select {}

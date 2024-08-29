@@ -29,12 +29,22 @@
                     <div class="graph_header">
                         <h2>Progresso do Dia</h2>
                         <hr class="linha_header" />
-                        Data
+                        <div>Data</div>
                     </div>
                     <div class="graph_header_subtitle">Tarefas: <b>3/6</b></div>
+                    <div class="graph_box">
+
+                        <div class="graph_placeholder"></div>
+
+                        <p class="graph_header_tasks_left">Restam 3 tarefas</p>
+                    </div>
                 </section>
                 <section class="list">
-                    Lista
+                    <div class="list_header">
+                        <select class="list_header_select" name="" id="">
+                            <option value="1">Todas as tarefas</option>
+                        </select>
+                    </div>
                 </section>
             </main>
         </div>

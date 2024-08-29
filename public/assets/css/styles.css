@@ -101,8 +101,42 @@ section.graph {
     margin-top: 10px;
 }
 
+.list {
+    padding: 5px 15px;
+    flex: 1;
+}
+
 .list_header {
     display: flex;
 }
 
 .list_header_select {}
+
+.task_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.title, .priority, .actions {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.actions {
+    justify-content: flex-end;
+}
+
+.task_title {
+    margin-left: 10px;
+    font-weight: bold;
+}

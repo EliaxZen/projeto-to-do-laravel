@@ -59,6 +59,19 @@
                                 Editar - Excluir
                             </div>
                         </div>
+                        <div class="task">
+                            <div class="title">
+                                <input type="checkbox">
+                                <div class="task_title">Titulo da Tarefa</div>
+                            </div>
+                            <div class="priority">
+                                <div class="sphere"></div>
+                                <div>prioridade</div>
+                            </div>
+                            <div class="actions">
+                                Editar - Excluir
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>

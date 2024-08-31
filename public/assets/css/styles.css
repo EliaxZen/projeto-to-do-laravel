@@ -67,6 +67,7 @@ nav {
 
 .btn {
     padding: 20px 30px;
+    margin-left: 10px;
     border-radius: 15px;
     transition: transform var(--transition-time), background-color var(--transition-time);
     position: relative;

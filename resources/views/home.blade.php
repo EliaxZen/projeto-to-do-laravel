@@ -38,24 +38,25 @@
             </div>
         </div>
         <div class="task_list">
-            <div class="task">
-                <div class="title">
-                    <input class="title_checkbox" type="checkbox">
-                    <div class="task_title">Titulo da Tarefa</div>
-                </div>
-                <div class="priority">
-                    <div class="sphere"></div>
-                    <div>prioridade</div>
-                </div>
-                <div class="actions">
-                    <a href="#">
-                        <img src="/assets/images/icon-edit.png" alt="">
-                    </a>
-                    <a href="#">
-                        <img src="/assets/images/icon-delete.png" alt="">
-                    </a>
-                </div>
-            </div>
+            @php
+                $tasks = [
+                    [
+                        'id' => 1,
+                        'done' => false,
+                        'title' => 'Minha primeira task',
+                        'category' => 'Categoria 1',
+                    ],
+                    [
+                        'id' => 2,
+                        'done' => true,
+                        'title' => 'Minha segunda task',
+                        'category' => 'Categoria 2',
+                    ],
+                ];
+            @endphp
+            <x-task :data=$tasks[0]/>
+            <x-task :data=$tasks[1]/>
+
         </div>
     </section>
 </x-layout>

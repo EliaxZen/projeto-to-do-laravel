@@ -107,7 +107,6 @@ nav {
 main {
     display: flex;
     flex-direction: column;
-    padding: 20px;
     transition: padding var(--transition-time);
 }
 
@@ -128,13 +127,21 @@ section.graph:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+.graph_header_date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
 }
 
 .linha_header {
-    width: 50%;
+    width: 35%;
     height: 0.5px;
     border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: black;
 }
 
@@ -177,7 +184,7 @@ section.graph:hover {
 }
 
 .list {
-    padding: 5px 15px;
+    margin-left: 20px;
     flex: 1;
     transition: padding var(--transition-time);
 }
@@ -187,9 +194,86 @@ section.graph:hover {
     justify-content: space-between;
 }
 
+/* Container do select */
+.list_header_select-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilização geral do select */
 .list_header_select {
     font-size: 1rem;
-    transition: font-size var(--transition-time);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #ff2d20;
+    /* Cor vermelha da logo */
+    background-color: #fff;
+    /* Fundo branco */
+    color: #ff2d20;
+    /* Texto vermelho */
+    appearance: none;
+    /* Remove o estilo padrão */
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+/* Adiciona um ícone de seta para baixo personalizado */
+.list_header_select::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+    color: #ff2d20;
+    transition: transform 0.3s ease;
+}
+
+/* Estilização para o hover */
+.list_header_select:hover {
+    background-color: #ff2d20;
+    color: #fff;
+    /* Muda o texto para branco ao passar o mouse */
+    border-color: #e60000;
+    /* Um tom mais escuro de vermelho para contraste */
+}
+
+/* Animação no hover da seta */
+.list_header_select:hover::after {
+    transform: translateY(-50%) rotate(180deg);
+    /* Roda a seta ao passar o mouse */
+}
+
+/* Estilização para o foco (quando clicado) */
+.list_header_select:focus {
+    border-color: #e60000;
+    background-color: #ffe6e6;
+    color: #ff2d20;
+}
+
+/* Animação ao abrir a lista de opções */
+.list_header_select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #ff2d20;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animação para as opções */
+.list_header_select option:hover {
+    background-color: #ff2d20;
+    color: #fff;
+}
+
+/* Animação ao selecionar */
+.list_header_select option:checked {
+    background-color: #e60000;
+    color: #fff;
 }
 
 .task_list {

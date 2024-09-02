@@ -37,7 +37,8 @@ class TaskController extends Controller
         return view('tasks.edit', $data);
     }
 
-    public function edit_action(Request $request){
+    public function edit_action(Request $request)
+    {
         $request_data = $request->only(['title', 'category_id', 'description', 'due_date']);
         $task = Task::find($request->id);
         if (!$task) {

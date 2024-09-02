@@ -76,6 +76,8 @@ nav {
     background-color: var(--color-primary);
     color: white;
     text-decoration: none;
+    border: 0;
+    cursor: pointer;
 }
 
 .btn:before {
@@ -399,7 +401,10 @@ section.graph:hover {
 /* Container principal da seção de criação */
 #create_task_section {
     margin: 40px auto;
-    padding: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     max-width: 600px;
     background-color: #ffffff;
     border-radius: 20px;

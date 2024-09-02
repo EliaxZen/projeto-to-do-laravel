@@ -5,7 +5,7 @@
         </a>
     </x-slot:btn>
 
-    <section id="create_task_section">
+    <section id="task_section">
         <h1>Criar Tarefa</h1>
         <form action="{{ route('task.create_action') }}" method="POST">
             @csrf

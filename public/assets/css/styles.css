@@ -399,7 +399,7 @@ section.graph {
 }
 
 /* Container principal da seção de criação */
-#create_task_section {
+#task_section {
     margin: 40px auto;
     padding-right: 50px;
     padding-left: 50px;
@@ -416,7 +416,7 @@ section.graph {
 }
 
 /* Efeito de gradiente sutil de fundo */
-#create_task_section::before {
+#task_section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -431,19 +431,19 @@ section.graph {
 }
 
 /* Animação ao passar o mouse sobre o container */
-#create_task_section:hover {
+#task_section:hover {
     transform: translateY(-12px);
     /* Elevação mais pronunciada */
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
     /* Sombra mais intensa */
 }
 
-#create_task_section:hover::before {
+#task_section:hover::before {
     opacity: 0.8;
 }
 
 /* Estilo do título */
-#create_task_section>h1 {
+#task_section>h1 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 32px;
@@ -687,7 +687,7 @@ textarea:hover {
         height: 320px;
     }
 
-    #create_task_section {
+    #task_section {
         padding: 30px;
         margin: 20px;
     }

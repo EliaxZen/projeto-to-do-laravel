@@ -356,17 +356,6 @@ section.graph {
     font-weight: bold;
 }
 
-/* Efeito de foco */
-.title_checkbox:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 85, 85, 0.3);
-}
-
-/* Efeito de hover */
-.title_checkbox:hover {
-    border-color: #ff7f7f;
-    background-color: #ffebeb;
-}
 
 .actions {
     justify-content: flex-end;

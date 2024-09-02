@@ -9,7 +9,7 @@
         <h1>Criar Tarefa</h1>
         <form action="{{ route('task.create_action') }}" method="POST">
             @csrf
-
+            
             <x-form.text_input name="title" label="Titulo da Task" required="required"
                 placeholder="Digite o título da sua task" />
             <x-form.text_input name="due_date" label="Data de Realização" required="required" type="date" />

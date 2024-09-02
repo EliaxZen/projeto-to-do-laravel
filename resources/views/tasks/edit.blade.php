@@ -10,6 +10,7 @@
         <form action="{{ route('task.edit_action') }}" method="POST">
             @csrf
 
+            <input type="hidden" name="id" value="{{ $task->id }}">
             <x-form.text_input name="title" label="Titulo da Task" required="required"
                 placeholder="Digite o título da sua task" value="{{ $task->title }}"/>
             <x-form.text_input name="due_date" label="Data de Realização" required="required" type="date" value="{{ $task->due_date }}" />

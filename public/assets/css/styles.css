@@ -87,22 +87,20 @@ nav {
     left: -75%;
     width: 150%;
     height: 300%;
-    background: radial-gradient(circle, transparent 20%, var(--color-secondary) 20%, var(--color-secondary) 40%, transparent 40%);
     transition: transform 0.6s ease;
     transform: translateY(100%) translateX(-25%);
     z-index: -1;
 }
 
-.btn-primary:hover {
-    background-color: var(--color-secondary);
+.btn:hover {
     transform: scale(1.05);
 }
 
-.btn-primary:hover:before {
+.btn:hover:before {
     transform: translateY(0) translateX(0);
 }
 
-.btn-primary:hover span {
+.btn:hover span {
     color: white;
     transition: color 0.4s ease;
 }

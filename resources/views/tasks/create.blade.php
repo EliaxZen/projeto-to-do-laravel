@@ -14,7 +14,7 @@
             <x-form.select_input name="category" label="Categoria" required="required">
                 <option value="1">Valor qualquer</option>
             </x-form.select_input>
-            <x-form.text_area_input name="description" placeholder="Digite uma descrição para sua tarefa" />
+            <x-form.text_area_input name="description" label="Descrição da Tarefa" placeholder="Digite uma descrição para sua tarefa" />
             <x-form.form_button resetTxt="Resetar" submitTxt="Criar Tarefa"/>
         </form>
     </section>

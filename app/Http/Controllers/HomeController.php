@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     //
     public function index(Request $request){
-        $tasks = Task::all()->take(5);
+        $tasks = Task::all();
         $AuthUser = Auth::user();
 
         return view('home', ['tasks' => $tasks, 'AuthUser' => $AuthUser]);	

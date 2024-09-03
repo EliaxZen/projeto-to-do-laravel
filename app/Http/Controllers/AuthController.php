@@ -12,8 +12,22 @@ class AuthController extends Controller
         return view('login');
     }
 
+    public function login_action(Request $request){
+        $request->validate([
+            'email' =>'required|email',
+            'password' => 'required|min:6',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        if(auth()->attempt($credentials)){
+            return redirect()->route('home');
+        }
+
+        return redirect()->back()->withInput($request->only('email'));
+    }
+
     public function register(Request $request){
-        
         return view('register');
     }
 

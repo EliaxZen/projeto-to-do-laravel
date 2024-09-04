@@ -14,12 +14,17 @@
             <h2>Progresso do Dia</h2>
             <hr class="linha_header" />
             <div class="graph_header_date">
-                <img src="/assets/images/icon-prev-orange.png" alt="">
-                12 de outubro
-                <img src="/assets/images/icon-next-orange.png" alt="">
+                <a href="{{ route('home', ['date' => $date->copy()->subDay()->toDateString()]) }}">
+                    <img src="/assets/images/icon-prev-orange.png" alt="Anterior">
+                </a>
+                {{ $date->translatedFormat('d \d\e F') }}
+                <a href="{{ route('home', ['date' => $date->copy()->addDay()->toDateString()]) }}">
+                    <img src="/assets/images/icon-next-orange.png" alt="Próximo">
+                </a>
             </div>
         </div>
-        <div class="graph_header_subtitle">Tarefas: <b>3/6</b></div>
+        <div class="graph_header_subtitle">Tarefas: <b>{{ $tasks_count - $undone_tasks_count }}/{{ $tasks_count }}</b>
+        </div>
         <div class="graph_box">
 
             <div class="graph_placeholder">
@@ -59,11 +64,9 @@
                 </svg>
             </div>
 
-
-
             <div class="tasks_left_footer">
                 <img src="/assets/images/icon-info-orange.png" alt="" />
-                Restam 3 tarefas para serem realizadas
+                Restam {{ $undone_tasks_count }} tarefas para serem realizadas.
             </div>
 
         </div>

@@ -74,8 +74,10 @@
     <section class="list">
         <div class="list_header">
             <div class="list_header_select-container">
-                <select class="list_header_select" name="" id="">
-                    <option value="1">Todas as tarefas</option>
+                <select class="list_header_select" onChange="changeTaskStatusFilter(this)">
+                    <option value="all_task">Todas as tarefas</option>
+                    <option value="task_pending">Tarefas Pendentes</option>
+                    <option value="task_done">Tarefas Realizadas</option>
                 </select>
             </div>
         </div>
@@ -85,6 +87,28 @@
             @endforeach
         </div>
     </section>
+    <script>
+        function changeTaskStatusFilter(e) {
+            // Primeiro, mostra todas as tarefas
+            document.querySelectorAll('.task').forEach(function(element) {
+                element.style.display = 'flex'; // ou 'block', dependendo do layout
+            });
+
+            if (e.value == 'task_pending') {
+                // Esconde as tarefas concluídas
+                document.querySelectorAll('.task_done').forEach(function(element) {
+                    element.style.display = 'none';
+                });
+            } else if (e.value == 'task_done') {
+                // Esconde as tarefas pendentes
+                document.querySelectorAll('.task_pending').forEach(function(element) {
+                    element.style.display = 'none';
+                });
+            }
+        }
+    </script>
+
+
     <script>
         async function taskUpdate(element) {
             let status = element.checked;

@@ -3,6 +3,9 @@
         <a href="{{ route('home') }}" class="btn btn-primary">
             Voltar
         </a>
+        <a href="{{ route('register') }}" class="btn btn-primary">
+            Registrar-se
+        </a>
     </x-slot:btn>
 
     <section id="task_section">

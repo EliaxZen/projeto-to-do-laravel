@@ -283,19 +283,13 @@ section.graph {
 .task_list {
     width: 100%;
     margin-top: 20px;
-    animation: fadeIn 1.2s ease-in-out;
-
-    /* Definindo altura fixa para a lista de tarefas */
     max-height: 600px;
-
-    /* Adicionando barra de rolagem */
     overflow-y: auto;
     overflow-x: hidden;
-
-    /* Para navegadores compatíveis com Firefox */
-    scrollbar-width: thin;
-    scrollbar-color: #ff4a4a #f4f4f4;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    /* Transição suave */
 }
+
 
 /* Estilo da barra de rolagem para navegadores WebKit (Chrome, Safari) */
 .task_list::-webkit-scrollbar {
@@ -361,8 +355,20 @@ section.graph {
     padding: 20px 15px;
     margin-bottom: 10px;
     border-bottom: 1px solid var(--background-light);
-    transition: background-color var(--transition-time), border-radius var(--transition-time);
     position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    /* Transição suave */
+}
+
+.task.hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* Previne interação com tarefas escondidas */
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .task:hover {

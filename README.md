@@ -14,6 +14,5 @@ Este é um projeto de gerenciamento de tarefas desenvolvido com o framework Lara
 
 - **Laravel** - Framework PHP
 - **MySQL** - Banco de dados
-- **Bootstrap** - Estilização
 
 ![image](https://github.com/user-attachments/assets/1c0ead62-7cd5-4a4b-ab90-2cbd2f57245a)

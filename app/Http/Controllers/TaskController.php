@@ -9,6 +9,18 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     //
+    public function update(Request $request){
+        $task  = Task::find($request->id);
+        if (!$task) {
+            return "Erro de task não existente";
+        }
+        $request_data = $request->only(['is_done','title', 'category_id', 'description', 'due_date']);
+        $request_data['is_done'] = $request->is_done? true : false;
+
+        $task->update($request_data);
+        return redirect(route('home'));
+    }
+
     public function index(Request $request) {}
 
     public function create(Request $request)

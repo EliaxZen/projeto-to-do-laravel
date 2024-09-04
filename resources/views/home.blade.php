@@ -42,7 +42,8 @@
 
                     <!-- Círculo de progresso com gradiente e sombra -->
                     <circle cx="100" cy="100" r="90" fill="none" stroke="url(#progressGradient)"
-                        stroke-width="20" stroke-dasharray="310" stroke-dashoffset="140" transform="rotate(-90 100 100)" />
+                        stroke-width="20" stroke-dasharray="310" stroke-dashoffset="140"
+                        transform="rotate(-90 100 100)" />
 
                     <!-- Texto de porcentagem -->
                     <text x="50%" y="50%" text-anchor="middle" fill="#EF3B2D" font-size="40px" dy="5px"
@@ -85,16 +86,25 @@
         async function taskUpdate(element) {
             let status = element.checked;
             let taskId = element.dataset.id;
+            let url = '{{ route('task.update') }}';
             let rawResult = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'accept': 'application/json
+                    'accept': 'application/json',
                 },
-                body: JSON.stringify({status, taskId})
-            })
-            result = await rawResult.json()
-            console.log(result)
+                body: JSON.stringify({
+                    status,
+                    taskId,
+                    _token: '{{ csrf_token() }}'
+                })
+            });
+            let result = await rawResult.json();
+            if (result.success) {
+                console.log('Task updated successfully');
+            } else {
+                element.checked = !status;
+            }
         }
     </script>
 </x-layout>

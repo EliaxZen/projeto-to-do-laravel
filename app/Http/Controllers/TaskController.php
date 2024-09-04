@@ -9,17 +9,20 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     //
-    public function update(Request $request){
-        $task  = Task::find($request->id);
-        if (!$task) {
-            return "Erro de task não existente";
-        }
-        $request_data = $request->only(['is_done','title', 'category_id', 'description', 'due_date']);
-        $request_data['is_done'] = $request->is_done? true : false;
+    public function update(Request $request)
+    {
+        $task = Task::find($request->taskId);
 
-        $task->update($request_data);
-        return redirect(route('home'));
+        if (!$task) {
+            return ['success' => false, 'message' => 'Task not found'];
+        }
+
+        $task->is_done = filter_var($request->status, FILTER_VALIDATE_BOOLEAN);
+        $task->save();
+
+        return ['success' => true];
     }
+
 
     public function index(Request $request) {}
 
@@ -51,7 +54,7 @@ class TaskController extends Controller
 
     public function edit_action(Request $request)
     {
-        $request_data = $request->only(['is_done','title', 'category_id', 'description', 'due_date']);
+        $request_data = $request->only(['is_done', 'title', 'category_id', 'description', 'due_date']);
         $request_data['is_done'] = $request->is_done ? true : false;
 
         $task = Task::find($request->id);
